@@ -41,8 +41,9 @@ Ela é bem parecida com o Get, como podemos ver a menção na documentação do 
 
 > his is the same as request.get but it takes one more param:
 
-|Parameter	| Notes
-|postData	| Must be a string with application/x-www-form-urlencoded. Eg: a=b&c=d
+| Parameter	| Notes |
+|-----------|-------|
+| postData	| Must be a string with application/x-www-form-urlencoded. Eg: a=b&c=d |
 
 ```
 flaresolverpost <- function(url,body,arquivo){
@@ -59,3 +60,5 @@ flaresolverpost <- function(url,body,arquivo){
   resposta
   write(resposta$solution$response,arquivo)
   ```
+
+  Essa forma de requisição é bem interessante e por vezes necessária, pois lidamos com muitos desafios técnicos na coleta de informações de processos via webscraping (e captcha é um deles). Para utilizar uma função que já existe, podemos contar com o Docker ;)
